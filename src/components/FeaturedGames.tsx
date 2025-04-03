@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface GameCardProps {
   title: string;
@@ -83,13 +84,15 @@ const FeaturedGames = () => {
               Explore our collection of cutting-edge games powered by alien technology
             </p>
           </div>
-          <Button 
-            variant="outline" 
-            className="mt-6 md:mt-0 border-alien-teal/30 text-alien-teal hover:bg-alien-teal/10"
-          >
-            View All Games
-            <ChevronRight size={16} className="ml-2" />
-          </Button>
+          <Link to="/discover-games">
+            <Button 
+              variant="outline" 
+              className="mt-6 md:mt-0 border-alien-teal/30 text-alien-teal hover:bg-alien-teal/10"
+            >
+              View All Games
+              <ChevronRight size={16} className="ml-2" />
+            </Button>
+          </Link>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
