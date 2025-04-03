@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				alien: {
+					'dark': '#0F111A',
+					'purple': '#9B87F5',
+					'blue': '#0EA5E9',
+					'teal': '#00FFFF',
+					'bright-purple': '#8B5CF6',
+					'magenta': '#D946EF'
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,51 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': {
+						filter: 'brightness(1)'
+					},
+					'50%': {
+						filter: 'brightness(1.3)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					}
+				},
+				'shimmer': {
+					'0%': {
+						backgroundPosition: '-40rem 0'
+					},
+					'100%': {
+						backgroundPosition: '40rem 0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+				'shimmer': 'shimmer 2s linear infinite'
+			},
+			fontFamily: {
+				'orbitron': ['Orbitron', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif']
 			}
 		}
 	},
